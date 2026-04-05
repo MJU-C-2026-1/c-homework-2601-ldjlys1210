@@ -26,7 +26,7 @@ int main()
   printf("마신 에너지 드링크 수를 입력하세요:\n");
   scanf("%d",&energy_cup);
   
-  printf("잠잔 시간을 입력하세요: \n);
+  printf("잠잔 시간을 입력하세요: \n");
   scanf("%f",&actual_sleep);
   
   caffeine=coffee_cup*125+energy_cup*69;
