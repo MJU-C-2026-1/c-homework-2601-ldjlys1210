@@ -18,12 +18,16 @@ int main()
   
   printf("이름을 입력하세요 : \n");
   scanf("%s",&name);
+  
   printf("마신 커피 잔 수를 입력하세요:\n");
-  scanf(" %d",&coffee_cup);
+  scanf("%d",&coffee_cup);
+  
   printf("마신 에너지 드링크 수를 입력하세요:\n");
-  scanf(" %d",&energy_cup);
+  scanf("%d",&energy_cup);
+  
   printf("잠잔 시간을 입력하세요: \n);
-  scanf(" %f",&actual_sleep);
+  scanf("%f",&actual_sleep);
+  
   caffeine=coffee_cup*125+energy_cup*69;
 
   printf("===%s님의 상태===\n");
