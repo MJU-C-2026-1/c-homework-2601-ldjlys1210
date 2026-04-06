@@ -9,7 +9,7 @@
 int main()
 {
   system("chcp 65001");
-  char name[20];
+  char name;
   int target_sleep=8;
   float actual_sleep;
   int sleep_time;
@@ -18,7 +18,7 @@ int main()
   int energy_cup;
   
   printf("이름을 입력하세요 : \n");
-  scanf("%s",&name);
+  scanf("%c",&name);
   
   printf("마신 커피 잔 수를 입력하세요:\n");
   scanf("%d",&coffee_cup);
@@ -31,7 +31,7 @@ int main()
   
   caffeine=coffee_cup*125+energy_cup*69;
 
-  printf("===%s님의 상태===\n");
+  printf("===%c님의 상태===\n");
   printf("카페인 섭취량 =%f\n",caffeine);
   printf("잠잔 시간=%f\n",actual_sleep);
   return 0;
