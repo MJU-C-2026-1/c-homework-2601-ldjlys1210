@@ -31,7 +31,7 @@ int main()
   
   caffeine=coffee_cup*125+energy_cup*69;
 
-  printf("===%c님의 상태===\n");
+  printf("===%c님의 상태===\n",name);
   printf("카페인 섭취량 =%f\n",caffeine);
   printf("잠잔 시간=%f\n",actual_sleep);
   return 0;
