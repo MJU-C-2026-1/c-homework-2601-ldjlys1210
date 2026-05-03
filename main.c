@@ -35,15 +35,26 @@ int main()
   printf("카페인 섭취량 =%f\n",caffeine);
   printf("잠잔 시간=%f\n",actual_sleep);
 
-  printf("%c님의 건강상태 보고\n");
+  printf("%c님의 건강상태 보고\n",name);
   if (caffeine>=400)
   {
     printf("카페인 섭취 과다");
-    if ()
+    if (actual_sleep<8)
+    {
+      printf("수면부족 심각, 건강관리 요망");
+    }
+    else
+    {
+      printf("수면이 부족합니다.");
+    }
   }
   else
   {
     printf("적정량의 카페인 섭취함.");
+    if (actual_sleep>=8)
+    {
+      printf("적정한 수면과 카페인을 취하셨습니다.");
+    }
   }
   return 0;
 }
