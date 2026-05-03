@@ -17,7 +17,7 @@ int main()
   int coffee_cup;
   int energy_cup;
   
-  printf("이름을 입력하세요 : \n");
+  printf("이니셜을 입력하세요 : \n");
   scanf("%c",&name);
   
   printf("마신 커피 잔 수를 입력하세요:\n");
@@ -34,6 +34,17 @@ int main()
   printf("===%c님의 상태===\n",name);
   printf("카페인 섭취량 =%f\n",caffeine);
   printf("잠잔 시간=%f\n",actual_sleep);
+
+  printf("%c님의 건강상태 보고\n");
+  if (caffeine>=400)
+  {
+    printf("카페인 섭취 과다");
+    if ()
+  }
+  else
+  {
+    printf("적정량의 카페인 섭취함.");
+  }
   return 0;
 }
 //카피하면 안 됨. 다 보임.
