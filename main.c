@@ -18,19 +18,24 @@ int main()
   int energy_cup;
 
   int choice;
-  printf("수면 건강관리시스템 프로그램\n");
-  printf("프로그램 종료를 원하면 0을, 시작을 원하면 1을 눌러주세요.\n");
-  scanf("%d",&choice);
-  printf("%d",choice);
+  // printf("수면 건강관리시스템 프로그램\n");
+  // printf("프로그램 종료를 원하면 0을, 시작을 원하면 1을 눌러주세요.\n");
+  // scanf("%d",&choice);
+  // printf("%d",choice);
 
   while(1)
   {
+    printf("수면 건강관리시스템 프로그램\n");
+    printf("프로그램 종료를 원하면 0을, 시작을 원하면 1을 눌러주세요.\n");
+    scanf("%d",&choice);
+    printf("%d",choice);
+    
     if(choice==0)
     {
       printf("프로그램을 종료합니다.");
       break;
     }
-    else if(chice==1)
+    else if(choice==1)
     {
       printf("이니셜을 입력하세요 : \n");
       scanf(" %c",&name);
