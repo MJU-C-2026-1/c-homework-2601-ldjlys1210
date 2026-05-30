@@ -16,6 +16,13 @@ int main()
   float caffeine;
   int coffee_cup;
   int energy_cup;
+
+  int choice;
+  printf("수면 건강관리시스템 프로그램\n");
+  printf("프로그램 종료를 원하면 0을, 시작을 원하면 1을 눌러주세요.\n");
+  scanf("%d",&choice);
+  printf("%d",choice);
+
   
   printf("이니셜을 입력하세요 : \n");
   scanf("%c",&name);
