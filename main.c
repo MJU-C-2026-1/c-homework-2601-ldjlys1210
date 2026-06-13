@@ -39,7 +39,7 @@ int main()
       break;
     }
     else if(choice==1||choice==2||choice==3)
-    {//400,300,150
+    {/
       struct User user;
       user.choice = choice;
 
@@ -108,4 +108,4 @@ void print_report(struct User u)
       }
     }
 }
-//카피하면 안 됨. 다 보임.
+
