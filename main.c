@@ -51,11 +51,11 @@ int main()
     }
     else if(choice==1||choice==2||choice==3)
     {//400,300,150
-      struct User;
+      struct User user;
       user.choice = choice;
 
-      input_data(struct User);
-      print_report(struct User);
+      input_data(user);
+      print_report(user);
     } 
     else
     {
@@ -68,26 +68,26 @@ int main()
 void input_data(struct User)
 {
   printf("이니셜을 입력하세요 : \n");
-  scanf(" %c",&name);
+  scanf(" %c",&user.name);
       
   printf("마신 커피 잔 수를 입력하세요:\n");
-  scanf("%d",&coffee_cup);
+  scanf("%d",&user.coffee_cup);
       
   printf("마신 에너지 드링크 수를 입력하세요:\n");
-  scanf("%d",&energy_cup);
+  scanf("%d",&user.energy_cup);
       
   printf("잠잔 시간을 입력하세요: \n");
-  scanf("%f",&actual_sleep);
+  scanf("%f",&user.actual_sleep);
       
   caffeine=coffee_cup*125+energy_cup*69;
 }
 void print_report(struct User)
 {
-  printf("===%c님의 상태===\n",name);
-  printf("카페인 섭취량 =%.2f\n",caffeine);
-  printf("잠잔 시간=%.2f\n",actual_sleep);
+  printf("===%c님의 상태===\n",user.name);
+  printf("카페인 섭취량 =%.2f\n",user.caffeine);
+  printf("잠잔 시간=%.2f\n",user.actual_sleep);
   printf("\n\n");
-  printf("%c님의 건강상태 보고\n",name);
+  printf("%c님의 건강상태 보고\n",user.name);
   int caffeine_limit=400;
   if (choice==3)
   {
