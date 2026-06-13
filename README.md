@@ -122,5 +122,5 @@
      
 ### **📁 증빙 자료:**
   * [4차_AI협업캡처.pdf 첨부 완료] (첨부 후 링크)![alt text](image.png),![alt text](image-1.png),![alt text](image-3.png),![alt text](image-4.png),![alt text](image-5.png),![alt text](image-6.png)
-  * [4차과제_실행결과.jpg]
+  * [4차과제_실행결과.jpg]![alt text](image-7.png)
 <br>

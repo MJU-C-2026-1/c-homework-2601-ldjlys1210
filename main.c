@@ -39,7 +39,7 @@ int main()
       break;
     }
     else if(choice==1||choice==2||choice==3)
-    {/
+    {
       struct User user;
       user.choice = choice;
 
