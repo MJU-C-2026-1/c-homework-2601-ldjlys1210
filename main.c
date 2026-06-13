@@ -16,8 +16,8 @@ struct User{
   float caffeine;
 };
 
-void input_data(struct User);
-void print_report(struct User);
+void input_data(struct User *u);
+void print_report(struct User u);
 
 
 int main()
@@ -54,7 +54,7 @@ int main()
       struct User user;
       user.choice = choice;
 
-      input_data(user);
+      input_data(&user);
       print_report(user);
     } 
     else
@@ -65,43 +65,43 @@ int main()
   }
   return 0;
 }
-void input_data(struct User)
+void input_data(struct User *u)
 {
   printf("이니셜을 입력하세요 : \n");
-  scanf(" %c",&user.name);
+  scanf(" %c",&(u.name));
       
   printf("마신 커피 잔 수를 입력하세요:\n");
-  scanf("%d",&user.coffee_cup);
+  scanf("%d",&(u.coffee_cup));
       
   printf("마신 에너지 드링크 수를 입력하세요:\n");
-  scanf("%d",&user.energy_cup);
+  scanf("%d",&(u.energy_cup));
       
   printf("잠잔 시간을 입력하세요: \n");
-  scanf("%f",&user.actual_sleep);
+  scanf("%f",&(u.actual_sleep));
       
   caffeine=coffee_cup*125+energy_cup*69;
 }
-void print_report(struct User)
+void print_report(struct User u)
 {
-  printf("===%c님의 상태===\n",user.name);
-  printf("카페인 섭취량 =%.2f\n",user.caffeine);
-  printf("잠잔 시간=%.2f\n",user.actual_sleep);
+  printf("===%c님의 상태===\n",u.name);
+  printf("카페인 섭취량 =%.2f\n",u.caffeine);
+  printf("잠잔 시간=%.2f\n",u.actual_sleep);
   printf("\n\n");
-  printf("%c님의 건강상태 보고\n",user.name);
+  printf("%c님의 건강상태 보고\n",u.name);
   int caffeine_limit=400;
-  if (choice==3)
+  if (u.choice==3)
   {
     caffeine_limit=300;
   }
-  else if (choice==4)
+  else if (u.choice==4)
   {
     caffeine_limit=150;
   }
   
-    if (caffeine>=caffeine_limit)
+    if (u.caffeine>=caffeine_limit)
     {
       printf("카페인 섭취 과다\n");
-      if (actual_sleep<8)
+      if (u.actual_sleep<8)
       {
         printf("수면부족 심각, 건강관리 요망\n");
       }
@@ -113,7 +113,7 @@ void print_report(struct User)
     else
     {
       printf("적정량의 카페인 섭취함.\n");
-      if (actual_sleep>=8)
+      if (u.actual_sleep>=8)
       {
         printf("적정한 수면과 카페인을 취하셨습니다.\n");
       }
