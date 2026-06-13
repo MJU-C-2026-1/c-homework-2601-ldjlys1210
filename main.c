@@ -23,19 +23,8 @@ void print_report(struct User u);
 int main()
 {
   system("chcp 65001");
-  // char name;
-  // int target_sleep=8;
-  // float actual_sleep;
-  // int sleep_time;
-  // float caffeine;
-  // int coffee_cup;
-  // int energy_cup;
 
   int choice;
-  // printf("수면 건강관리시스템 프로그램\n");
-  // printf("프로그램 종료를 원하면 0을, 시작을 원하면 1을 눌러주세요.\n");
-  // scanf("%d",&choice);
-  // printf("%d",choice);
 
   while(1)
   {
@@ -68,18 +57,18 @@ int main()
 void input_data(struct User *u)
 {
   printf("이니셜을 입력하세요 : \n");
-  scanf(" %c",&(u.name));
+  scanf(" %c",&(u->name));
       
   printf("마신 커피 잔 수를 입력하세요:\n");
-  scanf("%d",&(u.coffee_cup));
+  scanf("%d",&(u->coffee_cup));
       
   printf("마신 에너지 드링크 수를 입력하세요:\n");
-  scanf("%d",&(u.energy_cup));
+  scanf("%d",&(u->energy_cup));
       
   printf("잠잔 시간을 입력하세요: \n");
-  scanf("%f",&(u.actual_sleep));
+  scanf("%f",&(u->actual_sleep));
       
-  caffeine=coffee_cup*125+energy_cup*69;
+  u->caffeine=u->coffee_cup*125+u->energy_cup*69;
 }
 void print_report(struct User u)
 {
@@ -89,11 +78,11 @@ void print_report(struct User u)
   printf("\n\n");
   printf("%c님의 건강상태 보고\n",u.name);
   int caffeine_limit=400;
-  if (u.choice==3)
+  if (u.choice==2)
   {
     caffeine_limit=300;
   }
-  else if (u.choice==4)
+  else if (u.choice==3)
   {
     caffeine_limit=150;
   }
